@@ -169,6 +169,12 @@ namespace Skills_international_school
             female_radio.Checked = false;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Student_List studentlis = new Student_List();
+            studentlis.Show();
+        }
+
         private void Registration_Load(object sender, EventArgs e)
         {
             this.registrationTableAdapter1.Fill(this.studentDataSet1.Registration);

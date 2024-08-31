@@ -71,6 +71,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StudentDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="StudentDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Student_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_List.Designer.cs">
+      <DependentUpon>Student_List.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_List.resx">
+      <DependentUpon>Student_List.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +131,17 @@
     </None>
     <None Include="StudentDataSet1.xss">
       <DependentUpon>StudentDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDataSet2.xsc">
+      <DependentUpon>StudentDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentDataSet2.xss">
+      <DependentUpon>StudentDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

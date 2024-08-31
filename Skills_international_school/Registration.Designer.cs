@@ -42,6 +42,8 @@
             this.txt_parentname = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.RegNoBox = new System.Windows.Forms.ComboBox();
+            this.registrationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.studentDataSet1 = new Skills_international_school.StudentDataSet1();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_homephone = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,6 +54,7 @@
             this.txt_address = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dob_datepicker = new System.Windows.Forms.DateTimePicker();
             this.female_radio = new System.Windows.Forms.RadioButton();
             this.male_radio = new System.Windows.Forms.RadioButton();
             this.lname_txt = new System.Windows.Forms.TextBox();
@@ -68,23 +71,22 @@
             this.studentDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.registrationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.registrationTableAdapter = new Skills_international_school.StudentDataSetTableAdapters.RegistrationTableAdapter();
-            this.studentDataSet1 = new Skills_international_school.StudentDataSet1();
-            this.registrationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.registrationTableAdapter1 = new Skills_international_school.StudentDataSet1TableAdapters.RegistrationTableAdapter();
-            this.dob_datepicker = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDataSet1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_update);
             this.groupBox1.Controls.Add(this.btn_register);
             this.groupBox1.Controls.Add(this.btn_clear);
@@ -216,9 +218,19 @@
             this.RegNoBox.Location = new System.Drawing.Point(138, 39);
             this.RegNoBox.Margin = new System.Windows.Forms.Padding(4);
             this.RegNoBox.Name = "RegNoBox";
-            this.RegNoBox.Size = new System.Drawing.Size(244, 33);
+            this.RegNoBox.Size = new System.Drawing.Size(244, 28);
             this.RegNoBox.TabIndex = 1;
             this.RegNoBox.SelectedIndexChanged += new System.EventHandler(this.RegNoBox_SelectedIndexChanged);
+            // 
+            // registrationBindingSource1
+            // 
+            this.registrationBindingSource1.DataMember = "Registration";
+            this.registrationBindingSource1.DataSource = this.studentDataSet1;
+            // 
+            // studentDataSet1
+            // 
+            this.studentDataSet1.DataSetName = "StudentDataSet1";
+            this.studentDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox3
             // 
@@ -323,12 +335,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Basic Details";
             // 
+            // dob_datepicker
+            // 
+            this.dob_datepicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dob_datepicker.CustomFormat = "dd-MM-yyyy";
+            this.dob_datepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dob_datepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dob_datepicker.Location = new System.Drawing.Point(119, 132);
+            this.dob_datepicker.Name = "dob_datepicker";
+            this.dob_datepicker.Size = new System.Drawing.Size(222, 26);
+            this.dob_datepicker.TabIndex = 4;
+            // 
             // female_radio
             // 
             this.female_radio.AutoSize = true;
             this.female_radio.Location = new System.Drawing.Point(244, 184);
             this.female_radio.Name = "female_radio";
-            this.female_radio.Size = new System.Drawing.Size(74, 20);
+            this.female_radio.Size = new System.Drawing.Size(71, 20);
             this.female_radio.TabIndex = 6;
             this.female_radio.TabStop = true;
             this.female_radio.Text = "Female";
@@ -339,7 +362,7 @@
             this.male_radio.AutoSize = true;
             this.male_radio.Location = new System.Drawing.Point(119, 184);
             this.male_radio.Name = "male_radio";
-            this.male_radio.Size = new System.Drawing.Size(58, 20);
+            this.male_radio.Size = new System.Drawing.Size(55, 20);
             this.male_radio.TabIndex = 5;
             this.male_radio.TabStop = true;
             this.male_radio.Text = "Male";
@@ -412,7 +435,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(92, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(421, 54);
+            this.label1.Size = new System.Drawing.Size(349, 44);
             this.label1.TabIndex = 2;
             this.label1.Text = "Skills International";
             // 
@@ -422,7 +445,7 @@
             this.link_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_logout.Location = new System.Drawing.Point(9, 9);
             this.link_logout.Name = "link_logout";
-            this.link_logout.Size = new System.Drawing.Size(60, 20);
+            this.link_logout.Size = new System.Drawing.Size(52, 17);
             this.link_logout.TabIndex = 3;
             this.link_logout.TabStop = true;
             this.link_logout.Text = "Logout";
@@ -434,7 +457,7 @@
             this.linkexit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkexit.Location = new System.Drawing.Point(605, 1031);
             this.linkexit.Name = "linkexit";
-            this.linkexit.Size = new System.Drawing.Size(37, 20);
+            this.linkexit.Size = new System.Drawing.Size(30, 17);
             this.linkexit.TabIndex = 18;
             this.linkexit.TabStop = true;
             this.linkexit.Text = "Exit";
@@ -459,37 +482,27 @@
             // 
             this.registrationTableAdapter.ClearBeforeFill = true;
             // 
-            // studentDataSet1
-            // 
-            this.studentDataSet1.DataSetName = "StudentDataSet1";
-            this.studentDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // registrationBindingSource1
-            // 
-            this.registrationBindingSource1.DataMember = "Registration";
-            this.registrationBindingSource1.DataSource = this.studentDataSet1;
-            // 
             // registrationTableAdapter1
             // 
             this.registrationTableAdapter1.ClearBeforeFill = true;
             // 
-            // dob_datepicker
+            // button1
             // 
-            this.dob_datepicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dob_datepicker.CustomFormat = "dd-MM-yyyy";
-            this.dob_datepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dob_datepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dob_datepicker.Location = new System.Drawing.Point(119, 132);
-            this.dob_datepicker.Name = "dob_datepicker";
-            this.dob_datepicker.Size = new System.Drawing.Size(222, 30);
-            this.dob_datepicker.TabIndex = 4;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(491, 39);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "View Student List";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(656, 1055);
+            this.ClientSize = new System.Drawing.Size(656, 749);
             this.Controls.Add(this.linkexit);
             this.Controls.Add(this.link_logout);
             this.Controls.Add(this.label1);
@@ -501,6 +514,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDataSet1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -508,8 +523,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -560,5 +573,6 @@
         private System.Windows.Forms.BindingSource registrationBindingSource1;
         private StudentDataSet1TableAdapters.RegistrationTableAdapter registrationTableAdapter1;
         private System.Windows.Forms.DateTimePicker dob_datepicker;
+        private System.Windows.Forms.Button button1;
     }
 }
